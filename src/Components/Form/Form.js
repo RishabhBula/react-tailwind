@@ -16,7 +16,7 @@ const initialValues = {
 }
 
 const Form = () => {
-    const [state, setstate] = useState()
+    const [state, setstate] = useState();
 
     const { values, errors, handleBlur, touched, handleChange, handleSubmit } = useFormik({
         validationSchema: ContactSchema,
@@ -24,7 +24,7 @@ const Form = () => {
         onSubmit: (values, action) => {
             setstate(values)
             console.log(values);
-            action.resetForm()
+            action.handleReset()
 
         }
 

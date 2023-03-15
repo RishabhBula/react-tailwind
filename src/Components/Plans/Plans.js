@@ -4,8 +4,8 @@ const Plans = () => {
     return (
         <>
             <div className='bg-[#203658]'>
-                <div className='container mx-auto  grid grid-cols-4 place-items-center  text-white'>
-                    <div className='flex gap-4 w-full justify-center items-center py-12 px-20 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
+                <div className='container mx-auto gap-10 px-20 grid grid-cols-4 place-items-center  text-white'>
+                    <div className='flex gap-4 w-full justify-start items-center py-12 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
                         <div className='text-4xl font-semibold'>
                             10
                         </div>
@@ -13,7 +13,7 @@ const Plans = () => {
                             Years of Experience
                         </div>
                     </div>
-                    <div className='flex gap-4 w-full justify-center items-center py-12 px-20 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
+                    <div className='flex gap-4 w-full justify-start items-center py-12 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
                         <div className='text-4xl font-semibold'>
                             2K+
                         </div>
@@ -21,7 +21,7 @@ const Plans = () => {
                             Best Destination
                         </div>
                     </div>
-                    <div className='flex gap-4 w-full justify-center items-center py-12 px-20 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
+                    <div className='flex gap-4 w-full justify-start items-center py-12 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
                         <div className='text-4xl font-semibold'>
                             10K+
                         </div>
@@ -29,7 +29,7 @@ const Plans = () => {
                             Happy Customers
                         </div>
                     </div>
-                    <div className='flex gap-4 w-full justify-center items-center py-12 px-20 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
+                    <div className='flex gap-4 w-full justify-start items-center py-12 after:content-[""] after:block after:absolute after:right-0 after:w-[1px] after:h-[25px] after:bg-[#fff] relative'>
                         <div className='text-4xl font-semibold'>
                             4.8
                         </div>

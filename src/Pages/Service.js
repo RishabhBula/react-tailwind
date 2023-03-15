@@ -1,15 +1,18 @@
 import React from "react";
 
-import Read from "../Components/Crud/Read"
-import Creat from "../Components/Crud/Creat"
+
+// import Creat from "../Components/Crud/Creat";
+
 import HeaderIII from "../Components/HeaderIII/HeaderIII";
+import CreatData from "../Components/Crud3/CreatData";
+import SeeData from "../Components/Crud3/SeeData";
 
 const Service = () => {
   return (
     <div>
       <HeaderIII />
-      <Creat />
-      <Read />
+      <CreatData />
+      <SeeData />
     </div>
   );
 };

@@ -14,16 +14,15 @@ const initialValues = {
 
 const LoginForm = () => {
     const [show, setShow] = useState(false)
-    const [showInput, setshowInput] = useState(false)
+    const [showInput] = useState(false)
 
     const { values, errors, handleBlur, touched, handleChange, handleSubmit } = useFormik({
         validationSchema: signUpSchema,
         initialValues: initialValues,
         onSubmit: (values, action) => {
             console.log(values);
-            setShow(values)
-            action.resetForm()
-
+            setShow(values);
+            action.resetForm();
         }
 
     })

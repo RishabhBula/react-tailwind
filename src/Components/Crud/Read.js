@@ -7,24 +7,25 @@ const Read = () => {
     const [show, setShow] = useState();
 
     useEffect(() => {
-        fetch("https://6406e4a3862956433e5cd6fb.mockapi.io/CrudApp/TeamXi").then(respo => {
+        fetch("https://6406e4a3862956433e5cd6fb.mockapi.io/CrudApp/MyData").then(respo => {
             respo.json().then(result => {
                 // console.log(result)
                 setShow(result)
-
             })
         })
 
     }, [])
     const setData = (shows) => {
-        let { id, firstName, lastName, checkbox } = shows;
+        let { id, firstName, lastName, email, password } = shows;
         localStorage.setItem('ID', id);
         localStorage.setItem('First Name', firstName);
         localStorage.setItem('Last Name', lastName);
-        localStorage.setItem('Checkbox Value', checkbox);
+        localStorage.setItem('Email', email);
+        localStorage.setItem('Password', password);
+
     }
     const onDelete = (id) => {
-        axios.delete(`https://6406e4a3862956433e5cd6fb.mockapi.io/CrudApp/TeamXi/${id}`).then(() => {
+        axios.delete(`https://6406e4a3862956433e5cd6fb.mockapi.io/CrudApp/MyData/${id}`).then(() => {
             setData();
         })
         setTimeout(() => {
@@ -50,7 +51,10 @@ const Read = () => {
                                     Last Name
                                 </th>
                                 <th className='border border-slate-400'>
-                                    Checked
+                                    Email
+                                </th>
+                                <th className='border border-slate-400'>
+                                    Password
                                 </th>
                                 <th className='border border-slate-400'>
                                     Update / Delete
@@ -73,24 +77,11 @@ const Read = () => {
                                         {shows.checkbox ? 'checked' : 'uncheked'}
                                     </td>
                                     <td className='border border-slate-400'>
-                                        <Link onClick={() => setData(shows)} to="/update">Update</Link> / &nbsp;
-                                        <Link onClick={() => onDelete(shows.id)} to="/service">Delete</Link>
+                                        <Link onClick={() => setData(shows)} >Update</Link> / &nbsp;
+                                        <Link onClick={() => onDelete(shows.id)} >Delete</Link>
                                     </td>
                                 </tr>
                             )}
-                            {/* <td className='border border-slate-400'>
-                            1
-                        </td>
-                        <td className='border border-slate-400'>
-                            1
-                        </td>
-                        <td className='border border-slate-400'>
-                            1
-                        </td>
-                        <td className='border border-slate-400'>
-                            1
-                        </td> */}
-
 
                         </tbody>
                     </table>
